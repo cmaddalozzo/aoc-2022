@@ -19,8 +19,8 @@ func findPacketMarker(message string) int {
 			unique_start = pos + 1
 		}
 		char_positions[c] = i
-		if i-unique_start == marker_len {
-			return i
+		if (i-unique_start)+1 == marker_len {
+			return i + 1
 		}
 	}
 	return -1
